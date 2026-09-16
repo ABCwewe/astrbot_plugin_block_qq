@@ -1,0 +1,7 @@
+{
+    "blacklist_qq": {
+        "type": "string",
+        "default": "",
+        "description": "黑名单QQ号，多个账号用逗号分隔"
+    }
+}

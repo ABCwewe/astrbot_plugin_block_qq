@@ -1,0 +1,7 @@
+[tool.ruff]
+line-length = 99
+
+[tool.ruff.lint]
+# BLE001: AstrBot 官方插件开发原则要求"良好的错误处理机制，不让插件因一个错误而崩溃"，
+# handler 中的防御性宽捕获是有意为之，故忽略该规则
+ignore = ["BLE001"]
