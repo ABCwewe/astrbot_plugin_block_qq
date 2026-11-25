@@ -1,7 +1,20 @@
 {
     "blacklist_qq": {
-        "type": "string",
-        "default": "",
-        "description": "黑名单QQ号，多个账号用逗号分隔"
+        "type": "list",
+        "description": "黑名单 QQ 列表",
+        "hint": "列表内用户的消息最先被拦截，后续插件与 LLM 均不会收到。优先级最高，白名单无法豁免。",
+        "default": []
+    },
+    "whitelist_qq": {
+        "type": "list",
+        "description": "白名单 QQ 列表",
+        "hint": "列表内用户不受正则关键词屏蔽；若同时存在于黑名单，仍按黑名单全量拦截。",
+        "default": []
+    },
+    "keyword_regex": {
+        "type": "list",
+        "description": "屏蔽关键词正则列表",
+        "hint": "每项一条 Python 正则，对消息文本做 search 匹配，命中任意一条即拦截该消息。非法正则会记录日志并跳过；避免使用可能灾难性回溯的写法。",
+        "default": []
     }
 }

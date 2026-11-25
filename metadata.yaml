@@ -1,16 +1,18 @@
 name: astrbot_plugin_block_qq
 author: MoeDawn
-version: 0.0.1
-desc: 前置黑名单拦截，阻断所有插件读取黑名单账号消息，减少token消耗
+version: 0.0.2
+desc: 前置黑名单与正则关键词拦截，阻断所有插件读取被屏蔽消息，减少token消耗
 main: main.py
-repo: https://github.com/MoeDawn/astrbot_plugin_block_qq
+repo: https://github.com/ABCwewe/astrbot_plugin_block_qq
 display_name: QQ黑名单前置拦截
-short_desc: 按QQ号前置拦截消息，阻止LLM调用
+short_desc: 按QQ号与正则关键词前置拦截消息，阻止LLM调用
 astrbot_version: ">=4.16,<5"
 support_platforms:
   - aiocqhttp
 tags:
   - QQ
   - 黑名单
+  - 关键词
+  - 正则
   - 屏蔽
   - 拦截
